@@ -16,4 +16,8 @@ public class SecurityController {
 		return "redirect:/opt";
 	}
 
+	@RequestMapping(value="/403")
+	public String accessDenied() {
+		return "403";
+	}
 }

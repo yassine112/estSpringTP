@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 	layout:decorator="template1">
 <head>
 <meta charset="UTF-8">
@@ -62,7 +63,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="card m-2">
+				<div class="card m-2" sec:authorize="hasRole('ROLE_ADMIN')">
 					<div class="card-header text-white bg-primary">Operation sur compte</div>
 					<div class="card-body">
 						<!-- TO-DO:  -->
